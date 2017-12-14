@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.min.css" charset="UTF-8" type="text/css">
+    <link rel="stylesheet" href="css/index.css" charset="UTF-8">
+    <script>window.PointerEvent = undefined</script>
+</head>
+<body>
+<section class="main" id="main">
+    <header class="header">
+        <div class="con">
+            <h1 class="logo">腾讯体育</h1>
+            <span class="type">NBA</span>
+            <span class="menu"></span>
+            <span class="login">登录</span>
+
+        </div>
+        <nav class="nav">
+            <a href="#">NBA</a>
+            <a href="#">CBA</a>
+            <a href="#">英超</a>
+            <a href="#">欧冠</a>
+            <a href="#">亚冠</a>
+            <a href="#">西甲</a>
+            <a href="#">意甲</a>
+            <a href="#">德甲</a>
+            <a href="#">法甲</a>
+            <a href="#">中超</a>
+            <a href="#">NFL</a>
+            <a href="#">综合</a>
+            <a href="#">欧洲</a>
+            <a href="#">社区</a>
+            <a href="#">下载</a>
+        </nav>
+    </header>
+    <!--video-->
+    <!--自由preload="none"的时候，poster才会起作用-->
+    <section class="videoArea">
+        <video controls preload="none" poster="img/poster.jpg"
+               src="http://111.202.85.148/vlive.qqvideo.tc.qq.com/j0020cap1lk.mp4?vkey=C5C2F51AB489A8BD80AC62201D70CCCDA5737988DD20BB010A3FD0AC7A969859D18D18AA8C1DE438DC7F1BD8427CAE83BD51BB0EADAA45A07FC03D44BC98EEF06BC2783F44A0719452B1C3B4B00D4CE91BBE9DD0D61EB78E&br=60&platform=2&fmt=auto&level=0&sdtfrom=v5010&locid=50439c14-e7ab-428a-8769-265b5a53fd20&size=9537282&ocid=2440500652">
+
+        </video>
+    </section>
+    <!--match info-->
+    <section class="matchInfo">
+       <!-- <div class="top">
+            <div class="home">
+                <img src="http://mat1.gtimg.com/sports/nba/logo/1602/9.png" alt="">
+                <span>96</span>
+            </div>
+            <div class="time">06月09日 09:00</div>
+            <div class="away">
+                <span>96</span>
+                <img src="http://mat1.gtimg.com/sports/nba/logo/1602/9.png" alt="">
+
+            </div>
+        </div>
+        <div class="middle">
+            <span></span>
+        </div>
+        <div class="bottom">
+            <span class="home">3637820</span>
+            <span class="type">NBA季后赛</span>
+            <span class="away">4413861</span>
+        </div>-->
+    </section>
+    <section class="matchList">
+        <ul class="clear">
+          <!--  <li class="bg">
+                <div>
+                    <img src="http://vpic.video.qq.com/39729212/z0020jvzcm6_160_90_3.jpg" alt="">
+                    <span>02:03</span>
+                </div>
+                <p>美国阿根廷 杜兰特23分考辛斯两双</p>
+            </li>-->
+        </ul>
+    </section>
+</section>
+
+<script charset="UTF-8" type="text/javascript" src="js/zepto_touch.js"></script>
+<script charset="UTF-8" type="text/javascript" src="js/iscroll-5.1.3.min.js"></script>
+<script charset="UTF-8" type="text/javascript" src="js/ejs.min.js"></script>
+<script charset="utf-8" type="text/template" id="matchInfoTemplate">
+    <div class="top">
+        <div class="home">
+            <img src="<%=matchInfo.leftBadge%>" alt="">
+            <span><%=matchInfo.leftGoal%></span>
+        </div>
+        <div class="time"><%=matchInfo.startTime.formatTime('{1}月{2}日{3}:{4}')%></div>
+        <div class="away">
+            <span><%=matchInfo.rightGoal%></span>
+            <img src="<%=matchInfo.rightBadge%>" alt="">
+
+        </div>
+    </div>
+    <div class="middle">
+        <span></span>
+    </div>
+    <div class="bottom">
+        <span class="home" type="1"><%=matchInfo.leftSupport%></span>
+        <span class="type"><%=matchInfo.matchDesc%></span>
+        <span class="away" type="2"><%=matchInfo.rightSupport%></span>
+    </div>
+</script>
+<script charset="utf-8" type="text/template" id="matchListTemplate">
+    <%$.each(matchList,function(index,item){%>
+    <li class="<%=index===0?'bg':''%>">
+        <div>
+            <img src="<%=item.pic%>" alt="">
+            <span><%=item.duration.substring(item.duration.indexOf(':')+1)%></span>
+        </div>
+        <p><%=item.title%></p>
+    </li>
+
+
+    <%})%>
+
+</script>
+<script src="js/index.js" charset="utf-8" type="text/javascript"></script>
+
+</body>
+</html>

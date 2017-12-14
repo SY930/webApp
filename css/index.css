@@ -1,0 +1,223 @@
+html {
+  font-size: 100px;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  color: #555;
+  background: #EBF0F5;
+}
+a,
+a:active,
+a:valid,
+a:hover,
+a:target {
+  display: block;
+  color: #555;
+}
+.main {
+  margin: 0 auto;
+}
+/*header*/
+.header {
+  /*con*/
+  /*nav*/
+}
+.header .con {
+  height: .88rem;
+  line-height: .88rem;
+  font-size: .32rem;
+  color: #FFF;
+  background: #1c90F2;
+}
+.header .con .logo,
+.header .con .type {
+  float: left;
+}
+.header .con .login,
+.header .con .menu {
+  float: right;
+}
+.header .con .logo {
+  padding-left: .7rem;
+  width: 1.44rem;
+  font-size: .32rem;
+  font-weight: normal;
+  border-right: 0.02rem solid #066DC4;
+  background: url("../img/icon-logo.png") no-repeat 0.1rem center;
+  background-size: .48rem ;
+}
+.header .con .type {
+  padding: 0 .2rem;
+  border-left: .02rem solid #61B2F6;
+}
+.header .con .login {
+  padding: 0 .3rem;
+}
+.header .con .menu {
+  width: .88rem;
+  height: .88rem;
+  background: url("../img/btn-nav-fold.png") no-repeat center;
+  background-size: 50% 50%;
+}
+.header nav {
+  padding: 0 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.3s linear 0s;
+  transition: height 0.3s linear 0s;
+}
+.header nav a {
+  float: left;
+  width: 16%;
+  height: .74rem;
+  font-size: .32rem;
+  line-height: .74rem;
+  text-align: center;
+}
+.header nav a:nth-child(6n+1) {
+  margin-left: 2%;
+}
+/*video*/
+.videoArea {
+  height: 3.6rem;
+  background: #000000;
+}
+.videoArea video {
+  width: 100%;
+  height: 100%;
+}
+/*match info*/
+.matchInfo {
+  background: #FFF;
+  box-sizing: border-box;
+  padding: .3rem;
+  overflow: hidden;
+}
+.matchInfo .top {
+  height: .6rem;
+  line-height: .6rem;
+}
+.matchInfo .top .home,
+.matchInfo .top .away {
+  width: 34%;
+  float: left;
+}
+.matchInfo .top .home img,
+.matchInfo .top .away img {
+  display: inline-block;
+  width: .64rem;
+  height: .6rem;
+  vertical-align: top;
+}
+.matchInfo .top .home span,
+.matchInfo .top .away span {
+  font-size: .4rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.matchInfo .top .home span {
+  margin-left: .24rem;
+}
+.matchInfo .top .time {
+  width: 32%;
+  float: left;
+  font-size: .24rem;
+  color: #999;
+}
+.matchInfo .top .away {
+  text-align: right;
+}
+.matchInfo .top .away span {
+  margin-right: .24rem;
+}
+.matchInfo .middle {
+  position: relative;
+  height: .04rem;
+  background: #1c90F2;
+  margin: .2rem auto;
+}
+.matchInfo .middle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: .04rem;
+  background: #F82D2D;
+  width: 0;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+.matchInfo .bottom {
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+}
+.matchInfo .bottom span {
+  float: left;
+  font-size: .24rem;
+  color: #999;
+  width: 34%;
+}
+.matchInfo .bottom .type {
+  width: 32%;
+}
+.matchInfo .bottom .home {
+  background: url("../img/support-left.png") no-repeat left center;
+  background-size: .24rem;
+}
+.matchInfo .bottom .home.bg {
+  color: #F82D2D;
+  background: url("../img/support-red.png") no-repeat left center;
+  background-size: .24rem;
+}
+.matchInfo .bottom .away {
+  background: url("../img/support-right.png") no-repeat right center;
+  background-size: .24rem;
+}
+.matchInfo .bottom .away.bg {
+  color: #1c90F2;
+  background: url("../img/support-blue.png") no-repeat right center;
+  background-size: .24rem;
+}
+/*---match List---*/
+.matchList {
+  box-sizing: border-box;
+  padding: .2rem .3rem;
+  width: 100%;
+  overflow: hidden;
+  background: #FFF;
+}
+.matchList li {
+  float: left;
+  margin-right: .2rem;
+  width: 2.2rem;
+  overflow: hidden;
+}
+.matchList li div {
+  position: relative;
+  width: 100%;
+  height: 1.24rem;
+}
+.matchList li div img {
+  width: 100%;
+  height: 100%;
+}
+.matchList li div span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: .08rem;
+  height: .31rem;
+  line-height: .31rem;
+  color: #FFF;
+  font-size: .24rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+.matchList li p {
+  font-size: .24rem;
+  line-height: .3rem;
+}
+.matchList li.bg p {
+  color: #F82D2D;
+}
